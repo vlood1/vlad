@@ -133,3 +133,65 @@
 # print(combination)
 
 
+## DICTIONARIES / HASHMAPS
+# {key:value} pairs
+
+
+RLEXP = {"Octane":"Best Car",
+         "Fennec":"Also Best Car",
+         "Scarab":"Funny egg car",
+         "Ripper":"only the wheels are cool"}
+
+# print(dir(RLEXP)) # lists every feasible command in dictionaries
+
+a = RLEXP.get("Octane") # * .get * used to retrieve a value of a key (that is entered inside the brackets as an arguement)
+print(a)
+
+b = RLEXP.get("Venom")
+print(b)
+# this prints 'None' as this is not defined as a key in the dictionary
+
+if RLEXP.get("Fennec"):
+    print("That car exists")
+else:
+    print("that car dont exist gng")
+
+# adding new key/values to the dictionary
+RLEXP.update({"Grog":"Ugly ahh car"})
+print(RLEXP)
+print("\n")
+
+RLEXP.update({"Fennec":"stupid french car"})
+print(RLEXP)
+print("\n")
+
+# removing key/values from the dictionary
+RLEXP.pop("Ripper")   # no need for {} braces here
+print(RLEXP)
+print("\n")
+
+# removing most recently added key/value
+RLEXP.popitem()
+print(RLEXP)
+print("\n")
+
+# clear/ delete everything in a dictionary
+######## RLEXP.clear()
+
+# return ALL KEYS from a dictionary (no values)
+keys = RLEXP.keys()
+print(keys)
+print("\n")
+
+# return ALL VALUES from a dictionary (no values)
+values = RLEXP.values()
+print(values)
+print("\n")
+
+# items returns the key/values, but represented in a 2D list
+items = RLEXP.items()
+print(items)
+print("\n")
+
+for k , v in RLEXP.items():
+    print(f"{k}: {v}")
